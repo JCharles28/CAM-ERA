@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+*::-webkit-scrollbar {
+    width: 0px;
+}
+/*corps principale*/
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #476C7A;
+    color: black;
+    padding: 0px;
+    margin: 0%;
+    font-weight: bold;
+}
+/*corps secondaire (sans compter la navbar)*/
+.body2 {
+    margin-top: 22px;
+    margin-left: 120px;
+    margin-right: 0px;
+    padding: 3%;
+}
+/*header de la page (slogan + logo)*/
+header {
+    text-align: center;
+}
+.trai{
+    width: 50%;
+    height: 2px;
+    background-color: black;
+    margin: auto;
+}
+.imglogo {
+    width: 20%;
+    height: auto;
+}
+/*nonaffichage du button pour l'adaptation au petit ecran*/
+.hamburger-menu__button {
+    display: none;
+}
+/*affichage de la navbar avec un boutton pour petti ecran*/
+@media screen and (max-width:640px) {
+
+    ul{
+        display: none;
+      }
+
+    .body2 {
+        margin: 10%
+
+    }
+    .hamburger-menu__button:hover .nav{
+        display: block;
+    }
+
+    .hamburger-menu__button {
+        color: #47C8FA;
+        width: 40px;
+        height: 40px;
+        border: 2px solid #47C8FA;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        z-index: 3;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-bottom: -10px;
+  }
+  
+  .hamburger-menu__button span {
+        line-height: 8px;
+        text-align: center;
+        font-size: 1.6rem;
+        font-weight: 400;
+  }
+  
+  .hamburger-menu__button span:last-child {
+        padding-bottom: 5px;
+  }
+}
+/*Bare de navigation verticale*/
+ul {
+    font-size: 17px;
+    list-style-type: none;
+    padding: 0px;
+    margin-top: -22px;
+    width: 120px;
+    background-color: #389EC7;
+    height: 100%;
+    position: fixed;
+    overflow: auto;
+}
+ul img{
+    margin-top: 20%;
+    margin-left: 15%;
+    height: 4em;
+    width: auto;
+}
+/*ul img:hover {
+    /* mettre un easter egg
+}*/
+li a{
+    display: block;
+    color: rgb(0, 0, 0);
+    padding: 8px 16px;
+    text-decoration: none;
+    
+}
+li a:hover{
+    color: white;
+    border-radius: 2%;
+}
+/*menu deroulant de la navbar*/
+.dropdown {
+    font-weight: bold;
+    float: left;
+    overflow: hidden;
+    font-size: 17px;
+}
+.dropdown .dropbtn {
+    text-align: left;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 8px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0; 
+}
+.dropdown .dropbtn:hover{
+    color: white;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #47C8FA;
+    min-width: 160px;
+    z-index: 1;
+} 
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover {
+    color: white;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/*alignement des titres (centrer)*/
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+.art-soulignement h3 {
+    text-decoration: underline overline solid #000000;
+}
+
+/*Presentation de l'ecole*/
+.Presentation {
+    font-size: 20px;
+    margin-top: 5%;
+    background-color:#389EC7;
+    padding: 3%;
+    border-radius: 12px;
+}
+.parcours {
+    margin-right: auto;
+    color: black;
+    text-align: center;
+}
+.parcourst {
+    background-color:#47C8FA;
+    padding: 3%;
+    width: 85%;
+    display : inline-block ;
+    border-radius: 13px;
+}
+.parcoursc {
+    background-color: #47C8FA;
+    padding: 3%;
+    width: 85%;
+    display: inline-block;  
+    margin-top: 5%;
+    border-radius: 13px;
+}
+/*
+.diplome {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 5%;
+    background-color: #389EC7;
+    padding: 3%;
+    border-radius: 12px;
+}
+
+.diplome1 {
+    color: #47C8FA;
+}
+
+.diplome2 {
+    color: #47C8FA;
+}
+
+.petit {
+    font-size: 10px;
+}
+*/
+/*Présentation des acteurs de notre école.*/
+.acteur {
+    font-size: 20px;
+    margin-top: 5%;
+    background-color: #389EC7;
+    padding: 3%;
+    border-radius: 12px;
+    text-align: center;
+}
+/*Definition de la taille/forme/place des images correspondant a nos acteur*/
+.imgact {
+    width: 35%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 1%;
+}
+
+.acteurpres {
+    background-color: none ;
+    padding: 3%;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+/*Definition de la taille/forme/place de la premiere image des acteurs car differente des autres*/
+.imgact1 {
+    width: 70%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.acteur1 {    
+    background-color:#47C8FA;
+    padding: 1%;
+    border-radius: 12px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  
+}
+.acteur2 {
+    background-color: #47C8FA;
+    padding: 1%;
+    border-radius: 12px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.acteur3 {
+    background-color:#47C8FA;
+    padding: 1%;
+    border-radius: 12px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.defi {
+    font-size: 10px;
+}
+
+.acteur4 {
+    background-color: #47C8FA;
+    padding: 1%;
+    border-radius: 12px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+/*Footer*/
+.baspage{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-color:#47C8FA;
+    border-radius: 10px;
+}
+
+iframe{
+    border-radius: 12px;
+    float: left;
+    margin-top: 6%;
+    margin-left: 20px;
+    margin-right: 5% ;
+
+}
+
+.information{
+    display: inline-block;
+    margin-top: 6%;
+    margin-left: 20px;
+    background-color: #47C8FA;
+    padding: 3%;
+    border-radius: 12px;
+}
+
+.contact {
+    display: inline-block;
+    margin-top: 6%;
+    margin-left: 20px;
+    background-color: #47C8FA;
+    padding: 10px;
+    border-radius: 12px;
+    width: 22%;
+}
+
+.contact img{
+    margin-top: 10px;
+    width: 30%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.contact text{
+    margin-top: 0px;
+}
+
+
+
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    box-sizing: border-box;
+    resize: vertical;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+  
+  /* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+  .container {
+    display: inline-block;
+    width: 20%;
+    height: 20%; 
+    margin-top: 6%;
+    margin-left: 20px;
+    background-color: #47C8FA;
+    padding: 10px;
+    border-radius: 12px;
+    width: 22%;
+  }
+
